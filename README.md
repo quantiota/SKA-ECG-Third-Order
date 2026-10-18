@@ -11,14 +11,14 @@ The second-order SKA learner gives one point per cycle in its cube (z₂, ż₂,
 2. **Segment** — s_k = u_k − u_k−1, from one point to the next: the direction of the run.
 3. **Direction** — c₃_k = cos(s_k, s_k−1), two successive segments compared: +1 the run goes on,
    −1 it turns back.
-4. **Input** — v₃_k = (P₂_k − P₂_k−1) · c₃_k, the change of P₂ times the direction, what the
+4. **Input** — v₃_k = ln(P₂_k / P₂_k−1) · c₃_k, the return of P₂ times the direction, what the
    third-order learner reads, one step per cycle.
 
 ## The third-order axes
 
 | | second order: one step per cycle | third order: one step per cycle |
 |---|---|---|
-| knowledge | z₂ = ‖Z₂‖, learned from the returns of c_k | z₃ = ‖Z₃‖, learned from v₃ = ΔP₂ · c₃ |
+| knowledge | z₂ = ‖Z₂‖, learned from the returns of c_k | z₃ = ‖Z₃‖, learned from v₃ = ln(P₂_k/P₂_k−1) · c₃ |
 | time step | Δt₂ = time between two cycles | Δt₃ = time between two cycles |
 | rate | ż₂ = dz₂/dt₂ | ż₃ = dz₃/dt₃ |
 | probability | P₂ = exp(−\|ΔH₂/H₂\|) | P₃ = exp(−\|ΔH₃/H₃\|) |
@@ -35,7 +35,7 @@ Each holds `data/`, `figures/` and `vr/`.
 ## Cubes — Autonomic Aging
 
 One cube per woman: third-order learning (scale 25) of her second-order run (scale 25), first order at her selected scale.
-Axes z₃, ż₃ and P₃ or Δt₃ (time between two cycles); colour = the sign of v₃ = ΔP₂ · c₃. Open in a browser; a headset can enter VR.
+Axes z₃, ż₃ and P₃ or Δt₃ (time between two cycles); colour = the sign of v₃ = ln(P₂_k/P₂_k−1) · c₃. Open in a browser; a headset can enter VR.
 
 | age | record | first-order scale | P₃ cube | Δt₃ cube |
 |---|---|---|---|---|
@@ -80,7 +80,7 @@ Axes z₃, ż₃ and P₃ or Δt₃ (time between two cycles); colour = the sign
 
 ## Cubes — PTB
 
-PhysioNet PTB Diagnostic ECG Database, lead II, 1000 Hz. One cube per record: third-order learning (scale 25) of its second-order run (scale 25), first order at scale 25. Axes z₃, ż₃ and P₃ or Δt₃ (time between two cycles); colour = the sign of v₃ = ΔP₂ · c₃.
+PhysioNet PTB Diagnostic ECG Database, lead II, 1000 Hz. One cube per record: third-order learning (scale 25) of its second-order run (scale 25), first order at scale 25. Axes z₃, ż₃ and P₃ or Δt₃ (time between two cycles); colour = the sign of v₃ = ln(P₂_k/P₂_k−1) · c₃.
 
 ### Healthy controls, under 40
 

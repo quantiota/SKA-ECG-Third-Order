@@ -1,6 +1,6 @@
 # Third-order cubes — PTB
 
-PhysioNet PTB Diagnostic ECG Database, lead II, 1000 Hz. One cube per record: third-order learning (scale 25) of its second-order run (scale 25), first order at scale 25. Axes z₃, ż₃ and P₃ or Δt₃ (time between two cycles); colour = the sign of v₃ = ΔP₂ · c₃. Open in a browser; a headset can enter VR.
+PhysioNet PTB Diagnostic ECG Database, lead II, 1000 Hz. One cube per record: third-order learning (scale 25) of its second-order run (scale 25), first order at scale 25. Axes z₃, ż₃ and P₃ or Δt₃ (time between two cycles); colour = the sign of v₃ = ln(P₂_k/P₂_k−1) · c₃. Open in a browser; a headset can enter VR.
 
 ### Healthy controls, under 40
 

@@ -2,7 +2,7 @@
 """3D cube (HTML, Three.js, WebXR) of a third-order run: one point per cycle.
 
 Axes: z₃ = ‖Z₃‖, ż₃ = dz₃/dt₃ (1/s), P₃ = exp(−|ΔH₃/H₃|) of the third-order learner.
-Colour = the sign of the input it learned, v₃ = ΔP₂ · c₃. With dt, the vertical axis is Δt₃ (ms), the time
+Colour = the sign of the input it learned, v₃ = ln(P₂_k / P₂_k−1) · c₃. With dt, the vertical axis is Δt₃ (ms), the time
 between two cycles, instead of P₃. Open the HTML file in a browser.
 
 Usage
@@ -35,7 +35,7 @@ def main():
         D["p"] = (1000 * d.dt3).round(1).tolist()
         D["ymax"] = float(1000 * d.dt3.max())
     desc = (f"{source(ds, rec)}. Third-order SKA learning, {len(d):,} steps, one per cycle. "
-            f"Input: v₃ = (P₂_k − P₂_k−1) · c₃_k, c₃_k = cos(s_k, s_k−1), s_k = the segment between two successive points "
+            f"Input: v₃ = ln(P₂_k / P₂_k−1) · c₃_k, c₃_k = cos(s_k, s_k−1), s_k = the segment between two successive points "
             f"(z₂, ż₂, P₂) of the second-order run (first-order scale {s1:g}, "
             f"second-order scale {s2:g}); third-order scale {s3:g}. Horizontal axes: z₃ = ‖Z₃‖ and "
             f"ż₃ = dz₃/dt₃ (1/s), dt₃ = the time between two cycles; "

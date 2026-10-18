@@ -1,7 +1,7 @@
 # Third-order cubes — Autonomic Aging
 
 One cube per woman: third-order learning (scale 25) of her second-order run (scale 25), first order at her selected scale.
-Axes z₃, ż₃ and P₃ or Δt₃ (time between two cycles); colour = the sign of v₃ = ΔP₂ · c₃. Open in a browser; a headset can enter VR.
+Axes z₃, ż₃ and P₃ or Δt₃ (time between two cycles); colour = the sign of v₃ = ln(P₂_k/P₂_k−1) · c₃. Open in a browser; a headset can enter VR.
 
 | age | record | first-order scale | P₃ cube | Δt₃ cube |
 |---|---|---|---|---|
