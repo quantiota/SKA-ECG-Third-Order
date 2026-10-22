@@ -213,7 +213,6 @@ PhysioNet PTB Diagnostic ECG Database, lead II, 1000 Hz. One cube per record: th
 
 ```bash
 cd scripts
-python learn_third_order.py aging 0060 25 25 2     # third-order learning (first, second, third-order scales)
 python plot_third_order.py aging 0060 25 25 2      # figure
 python build_cube3.py aging 0060 25 25 2           # cube, vertical axis P₃
 python build_cube3.py aging 0060 25 25 2 dt        # cube, vertical axis Δt₃ (time between two cycles)

@@ -8,7 +8,7 @@ between two cycles, instead of P₃. Open the HTML file in a browser.
 Usage
     python scripts/build_cube3.py aging 0060 25 25 25    # → aging/vr/ska3_ecg_0060_scale25_scale25_scale25_vr.html
     python scripts/build_cube3.py aging 0060 25 25 25 dt # → aging/vr/ska3_ecg_0060_scale25_scale25_scale25_dt_vr.html
-Requires: <dataset>/data/ska3_<record>_scale<s1>_scale<s2>_scale<s3>.csv (learn_third_order.py), pandas
+Requires: <dataset>/data/ska3_<record>_scale<s1>_scale<s2>_scale<s3>.csv (the third-order learning results), pandas
 """
 import json
 import sys
@@ -50,3 +50,4 @@ def main():
 
 if __name__ == "__main__":
     main()
+

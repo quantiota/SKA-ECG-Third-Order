@@ -5,7 +5,7 @@ coloured by the input learned, v₃ = (P₂_k − P₂_k−1) / P₂_k−1 · c�
 Usage
     python scripts/plot_third_order.py aging 0060 25 25 25
         → aging/figures/ska3_0060_scale25_scale25_scale25.png
-Requires: <dataset>/data/ska3_<record>_scale<s1>_scale<s2>_scale<s3>.csv (learn_third_order.py), pandas, matplotlib
+Requires: <dataset>/data/ska3_<record>_scale<s1>_scale<s2>_scale<s3>.csv (the third-order learning results), pandas, matplotlib
 """
 import sys
 
@@ -44,3 +44,4 @@ def main():
 
 if __name__ == "__main__":
     main()
+
